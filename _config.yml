@@ -103,6 +103,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/fisherofearth/MechaFishBlog.git
+  repo: https://github.com/fisherofearth/MechaFish.github.io.git
   branch: deploy
   message: auto-deploy
