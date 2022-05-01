@@ -1,0 +1,22 @@
+- class_name: 友情链接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: 盖聂
+      link: https://genie.vspace.site/
+      avatar: https://genie.vspace.site/images/avatar.jpg
+      descr: 大佬
+
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: Hexo 
+      link: https://hexo.io/zh-cn/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 官网    
+    - name: Theme Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://butterfly.js.org/img/avatar.png
+      descr: Butterfly 主题的作者Blog,内有教程
+
+
+
