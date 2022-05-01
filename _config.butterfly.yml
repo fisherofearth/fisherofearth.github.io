@@ -3,15 +3,15 @@
 # --------------------------------------
 
 menu:
-  Home: / || hide
-  About: /about/ || 
+  Home: / || fas fa-home
+  About: /about/ || fas fa-heart 
   # Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || 
-  分类: /categories/ ||
+  Tags: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
-  Link: /link/ || 
+  Link: /link/ || fas fa-link
   
 
 # Code Blocks (代碼相關)
@@ -78,7 +78,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: /img/doge.png
+  img: https://avatars.githubusercontent.com/u/12146467?s=400&u=b426922c26e2f32032d154760439f62be729d8f5&v=4
   effect: false
 
 # Disable all banner image
@@ -211,7 +211,7 @@ related_post:
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
 # figcaption (圖片描述文字)
-photofigcaption: false
+photofigcaption: true
 
 # post_pagination (分頁)
 # value: 1 || 2 || false
@@ -241,13 +241,13 @@ addThis:
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: true
+  enable: false
   sites: facebook,twitter,wechat,weibo,qq
 
 # AddToAny
 # https://www.addtoany.com/
 addtoany:
-  enable: false
+  enable: true
   item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
 
 # Comments System
@@ -512,7 +512,7 @@ canvas_ribbon:
 
 # Fluttering Ribbon (動態彩帶)
 canvas_fluttering_ribbon:
-  enable: false
+  enable: true
   mobile: false
 
 # canvas_nest
@@ -704,15 +704,15 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat 不要重複
 rightside_item_order:
-  enable: false
-  hide: # readmode,translate,darkmode,hideAside
-  show: # toc,chat,comment
+  enable: filen
+  hide: translate,hideAside
+  show: readmode,darkmode,toc,chat,comment
 
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------
@@ -827,7 +827,8 @@ inject:
      data-server="netease" 
      data-order="random"
      data-mini="true"
-     data-lrctype="0"
+     data-lrctype="false" 
+     data-preload="false"
      data-type="playlist" 
      data-fixed="true" 
      data-autoplay="false"> </div>
