@@ -101,8 +101,8 @@ theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-# deploy:
-#   type: git
-#   repo: https://github.com/fisherofearth/fisherofearth.github.io.git
-#   branch: deploy
-#   message: auto-deploy
+deploy:
+  type: git
+  repo: https://github.com/fisherofearth/fisherofearth.github.io.git
+  branch: deploy
+  message: auto-deploy
