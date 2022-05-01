@@ -8,9 +8,9 @@ tags: git
 #!/bin/bash
 
 # ------ User zone ---------
-proxy_protocol="socks"
-proxy_server="proxy.doghouse.io"
-proxy_port="10808"
+proxy_protocol="socks" # http/socks
+proxy_server="your_proxy_server_address" 
+proxy_port="10086"
 # --------------------------
 
 help="Fail: Bad argument. \n 
