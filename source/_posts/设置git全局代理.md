@@ -2,6 +2,7 @@
 title: 设置git全局代理
 date: 2022-04-30 22:26:15
 tags: git
+cover: https://1000logos.net/wp-content/uploads/2020/08/Git-Logo.png
 
 ---
 
