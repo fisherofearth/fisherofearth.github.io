@@ -87,10 +87,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: image/cover.jpg
+index_img: https://s3.bmp.ovh/imgs/2022/05/02/c2532ab5968c4c52.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: image/cover.jpg
+default_top_img: https://s3.bmp.ovh/imgs/2022/05/02/c2532ab5968c4c52.jpg
 
 # The banner image of archive page
 archive_img:
