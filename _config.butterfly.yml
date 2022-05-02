@@ -87,10 +87,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80
+index_img: image/cover.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: 
+default_top_img: image/cover.jpg
 
 # The banner image of archive page
 archive_img:
