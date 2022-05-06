@@ -28,7 +28,7 @@ jobs:
 
       - name: Echo TEST_SECRET 
         env:
-          SITE: ${{ gitalk.TEST_SECRET }}
+          SITE: ${{ secrets.TEST_SECRET }}
         run: echo $TEST_SECRET
 
       - name: Install Dependencies
