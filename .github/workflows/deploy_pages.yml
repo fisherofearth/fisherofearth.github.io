@@ -25,10 +25,7 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
-            
-      # - name: Install theme
-      #   run: git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
-      
+
       - name: Install Dependencies
         run: npm install
 
@@ -40,3 +37,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          publish_branch: public
