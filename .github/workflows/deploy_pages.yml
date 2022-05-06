@@ -16,13 +16,13 @@ jobs:
         with:
           node-version: '16'
       - name: Install hexo-cli
-        run: npm install hexo-cli
+        run: npm install hexo-cli -g
         
       - name: Install all dependencies
         run: npm install
 
       - name: Build
-        run: hexo generate
+        run: hexo g
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
