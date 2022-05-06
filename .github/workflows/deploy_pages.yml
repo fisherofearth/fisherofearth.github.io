@@ -26,6 +26,11 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
 
+      - name: Echo TEST_SECRET 
+        env:
+          SITE: ${{ gitalk.TEST_SECRET }}
+        run: echo $TEST_SECRET
+
       - name: Install Dependencies
         run: npm install
 
