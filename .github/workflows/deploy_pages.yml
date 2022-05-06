@@ -1,14 +1,35 @@
 name: deploy_pages
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-20.04
+    name: Build and push
+    environment: 
+      gitalk_client_secret: ${{ gitalk.CLIENT_SECRET }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      
+      - name: Install all dependencies
+        run: npm install
+
+      - name: Build
+        run: hexo generate
+
+      - name: Push
+        uses: fisherofearth/fisherofearth.github.io@master
+        env:
+          REPO: self
+          BRANCH: build # The branch name where you want to push the assets
+          FOLDER: build # The directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message
       
