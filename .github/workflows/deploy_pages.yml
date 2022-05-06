@@ -17,12 +17,12 @@ jobs:
           node-version: '16'
       - name: Install hexo-cli
         run: npm install -g hexo-cli 
-        
-      - run: hexo --version
-        
+                
       - name: Install all dependencies
         run: npm install
-
+        
+      - run: hexo --version
+      
       - name: Build
         run: hexo g
 
