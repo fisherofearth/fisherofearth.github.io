@@ -7,8 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     name: Build and push
-    env: 
-      gitalk_client_secret: ${{ gitalk.CLIENT_SECRET }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
