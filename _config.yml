@@ -113,5 +113,5 @@ search:
 deploy:
   type: git
   repo: https://github.com/fisherofearth/fisherofearth.github.io.git
-  branch: deploy
+  branch: gh-pages
   message: deploy
