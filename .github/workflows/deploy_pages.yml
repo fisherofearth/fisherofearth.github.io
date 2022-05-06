@@ -1,37 +1,32 @@
-name: deploy_pages
+name: Pages
+
 on:
   push:
     branches:
-      - master
-jobs:
-  build:
-    runs-on: ubuntu-20.04
-    name: Build and push
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
+      - main  # default branch
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - name: Install hexo-cli
-        run: npm install -g hexo-cli 
-                
-      - name: Install all dependencies
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
         run: npm install
-        
-      - run: hexo --version
-      
       - name: Build
-        run: hexo g
-
-      - name: Push
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: build # The branch name where you want to push the assets
-          FOLDER: build # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Build: ({sha}) {msg}" # The commit message
-      
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
