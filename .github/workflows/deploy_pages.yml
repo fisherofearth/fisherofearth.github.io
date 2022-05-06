@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - master  # default branch
-
+env:
+  gitalk:  
+    client_secret: ${{ secrets.CLIENT_SECRET }}
 jobs:
   pages:
     runs-on: ubuntu-latest
