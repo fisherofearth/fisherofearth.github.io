@@ -24,8 +24,8 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
             
-      - name: Install theme
-        run: git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+      # - name: Install theme
+      #   run: git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
       
       - name: Install Dependencies
         run: npm install
