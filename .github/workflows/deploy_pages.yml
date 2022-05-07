@@ -27,17 +27,12 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
 
-      # - name: Parser secret
-      #   uses: jwsi/secret-parser@v1
-      #   with:
-      #     filename: _config.butterfly.yml
-      #     secret-name: TRY_SECRET
-      #     secret-value: ${{ secrets.TRY_SECRET }}
-
-      - name: Echo TEST_SECRET 
-        env:
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
-        run: echo "print test secret:" $TEST_SECRET 
+      - name: Parser secret
+        uses: jwsi/secret-parser@v1
+        with:
+          filename: _config.butterfly.yml
+          secret-name: gitalk_clientsecret
+          secret-value: ${{ secrets.CLIENT_SECRET }}
 
       - name: Install Dependencies
         run: npm install
@@ -48,7 +43,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: public
