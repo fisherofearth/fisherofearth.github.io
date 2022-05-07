@@ -286,10 +286,10 @@ livere:
   uid:
 
 # gitalk
-# https://github.com/gitalk/gitalk
+# https://github.com/gitalk/gitalk ${{ secrets.TRY_SECRET }}
 gitalk:
   client_id: e816df5d87bcded77ecf
-  # client_secret: ${{ secrets.TRY_SECRET }}
+  client_secret:
   repo: fisherofearth.github.io
   owner: fisherofearth
   admin: fisherofearth
