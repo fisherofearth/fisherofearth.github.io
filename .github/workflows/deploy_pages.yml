@@ -27,6 +27,12 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
 
+      uses: jwsi/secret-parser@v1
+      with:
+        filename: _config.butterfly.yml
+        secret-name: TRY_SECRET
+        secret-value: ${{ secrets.TRY_SECRET }}
+
       - name: Echo TEST_SECRET 
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
